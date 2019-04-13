@@ -1,9 +1,5 @@
 require './key_vault_service'
-require 'pry'
 
-service = KeyVaultService.new
-puts service.get_secret 'arm-client-id' 
-
-binding.pry
+puts KeyVaultService.new("mtcden-sbx-tf-vault").get_secret("storage-account-name")
 
 print ""
